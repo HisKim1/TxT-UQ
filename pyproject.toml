@@ -1,0 +1,26 @@
+[project]
+name = "txt-uq"
+version = "1.0.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "dask==2025.9.1",
+    "numcodecs==0.14.1",
+    "numpy==2.3.3",
+    "pandas==2.3.2",
+    "pytorch-lightning==2.5.5",
+    "scikit-learn==1.7.2",
+    "tensorboard==2.20.0",
+    "torch==2.8.0",
+    "tqdm==4.67.1",
+    "xarray==2025.9.0",
+    "zarr==3.1.5",
+]
+
+[dependency-groups]
+dev = ["pytest==8.4.2"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "training", "uq"]
+
+[tool.uv]
+constraint-dependencies = ["grpcio==1.75.0"]
